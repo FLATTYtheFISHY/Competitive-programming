@@ -11,7 +11,7 @@ int main() {
     string numbercode[15] = {"REV-","RV-","CS-","ECS-","EX-","IX-","AS-V-","EBF-","BF-","MXVII-","XVII-","MXVI-","XVI-","XV-","MXV-"}; //15 from mxv
     string capacity[19] = {"1","2","6","10","12","15","18","25","30","35","50","75","72","100","150","2000","9000","1970",".50 cal"}; //19 at 50cal
     while(input != "g") {
-        cout << "Input lowercase g to generate a random Nerf name." << '\n';
+        cout << "Type in lowercase g to generate a random Nerf name." << '\n';
         getline(cin, input);
         if (input != "g") {
             if (input == "lowercase g" || input == "letter g" || input == "gee" || input == "Lowercase g") {
@@ -27,7 +27,7 @@ int main() {
         }
     }
     srand(time(NULL));
-        cout << "\n" << "Your new Nerf blaster name is: The " << firstnames[(rand() % 73)] << lastnames[(rand() % 18)] << " " << numbercode[(rand() % 15)] <<  capacity[(rand() % 18)] << '\n' << '\n' << "That was fun. Let's do it again. \n";
+        cout << "\n" << firstnames[(rand() % 73)] << lastnames[(rand() % 18)] << " " << numbercode[(rand() % 15)] <<  capacity[(rand() % 18)] << '\n' << '\n' << "That was fun. Let's do it again. \n";
         input = "l";
 }
     return 0;
