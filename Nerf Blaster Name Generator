@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    string input = "l";
+    while (1){
+    string firstnames[73] = {"Sharp","Strike","Long","Fire","Blast","Double","Tri","Triple","Hawk","Rapid","Red","Blue","Fury","Shock","Hyper","Gamegear","Pedroh","Jetcell","Cerrwiden","Flat","Elliott","Mojo","DemonDude","TMDGE","Big","Nano","Dual","Alpha","Delta","Beta","Sling","Ultra","Uber","Whip","Thunder","Lightning","Hail","Storm","Rip","Falcon","Raptor","Break","Barrel","Stock","Clear","Unclear","Strong","Side","Rhino","Cross","Pocket","Sharp","Snap","Strato","Surge","Rough","Sledge","Fuse","Flip","Roto","Brain","Dread","Rev","Wrath","Dead","Point","Micro","Scout","Sonic","Blaze","Blow","Speed","Swarm"}; //73 from swarm
+    string lastnames[18] = {"Fire","Strike","Shot","Fury","Shock","Trooper","Barrel","Break","Arm","Madness","Blitz","Glam","Swarm","Tech","Tek","Bow","Blast","Fish"}; //18 from fish
+    string numbercode[15] = {"REV-","RV-","CS-","ECS-","EX-","IX-","AS-V-","EBF-","BF-","MXVII-","XVII-","MXVI-","XVI-","XV-","MXV-"}; //15 from mxv
+    string capacity[19] = {"1","2","6","10","12","15","18","25","30","35","50","75","72","100","150","2000","9000","1970",".50 cal"}; //19 at 50cal
+    while(input != "g") {
+        cout << "Input lowercase g to generate a random Nerf name." << '\n';
+        getline(cin, input);
+        if (input != "g") {
+            if (input == "lowercase g" || input == "letter g" || input == "gee" || input == "Lowercase g") {
+                cout << "Way to be a smart@$$. Just type in 'g'. ";
+            } else {
+                if (input == "G") {
+                    cout << "Good try, but that's an uppercase G. ";
+                } else {
+                    cout << "That's not the a lowercase g. ";
+                }
+            }
+            cout << "Let's try that again. ";
+        }
+    }
+    srand(time(NULL));
+        cout << "\n" << "Your new Nerf blaster name is: The " << firstnames[(rand() % 73)] << lastnames[(rand() % 18)] << " " << numbercode[(rand() % 15)] <<  capacity[(rand() % 18)] << '\n' << '\n' << "That was fun. Let's do it again. \n";
+        input = "l";
+}
+    return 0;
+}
